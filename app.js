@@ -2,7 +2,7 @@ const userIcon = document.querySelector(".nav-user-icon");
 const settingsMenu = document.querySelector(".settings-menu");
 const darkThemeBtn = document.getElementById("dark-btn");
 const chatIcon = document.getElementById("chat-icon");
-
+const optionsMenu = document.querySelectorAll(".post-options");
 document.addEventListener("click", (e) => {
 
     const clickOnIcon = userIcon.contains(e.target);
@@ -50,6 +50,29 @@ function applyTheme() {
         document.body.classList.add("dark-theme");
     }
 }
+
+optionsMenu.forEach(optionMenu => {
+    const optionsBtn = optionMenu.previousElementSibling;
+    optionsBtn.addEventListener("click", (e)=> {
+        e.stopPropagation();
+        const isOpen = optionMenu.classList.contains("block");
+        optionsMenu.forEach(menu => {
+            menu.classList.remove("block");
+        })
+        if (!isOpen) {
+            optionMenu.classList.add("block");
+        }
+    })
+    optionMenu.addEventListener("click", (e)=> {
+        e.stopPropagation();
+    })
+})
+
+document.addEventListener("click", ()=> {
+    optionsMenu.forEach(menu => {
+        menu.classList.remove("block");
+    })
+})
 
 darkThemeBtn.addEventListener("click", darkTheme)
 

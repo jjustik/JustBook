@@ -142,7 +142,7 @@ nav {
     align-items: center;
     text-decoration: none;
     margin-bottom: 30px;
-    color: var(--link-color);
+    color: var(--text-color);
     width: fit-content;
 }
 
@@ -337,7 +337,7 @@ nav {
     background: var(--container-color);
     border-radius: 6px;
     padding: 20px;
-    color: var(--link-color);
+    color: var(--text-color);
 }
 
 .user-profile {
@@ -355,7 +355,7 @@ nav {
 .user-profile p {
     margin-bottom: -5px;
     font-weight: 500;
-    color: var(--link-color);
+    color: var(--text-color);
 }
 
 .user-profile small {
@@ -377,7 +377,7 @@ nav {
     width: 100%;
     border: 0;
     outline: 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--text-color);
     background: transparent;
     resize: none;
 }
@@ -391,7 +391,7 @@ nav {
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: var(--link-color);
+    color: var(--text-color);
     margin-right: 30px;
     font-size: 13px;
 }
@@ -421,7 +421,7 @@ nav {
     background: var(--container-color);
     border-radius: 6px;
     padding: 20px;
-    color: var(--link-color);
+    color: var(--text-color);
     margin: 20px 0;
 }
 
@@ -438,13 +438,13 @@ nav {
 }
 
 .post-text {
-    color: rgb(104, 104, 104);
+    color: var(--text-color);
     margin: 15px 0;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .post-text span {
-    color: var(--link-color);
+    color: var(--text-color);
     font-weight: 500;
 }
 
@@ -454,6 +454,7 @@ nav {
 }
 
 .post-row {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -485,8 +486,8 @@ nav {
     margin-right: 5px;
 }
 
-.post-row a svg {
-    fill: #9a9a9a;
+.post-row svg {
+    fill: #636363;
 }
 
 .load-more-button {
@@ -518,10 +519,6 @@ footer p {
     overflow: hidden;
     top: 108%;
     right: 5%;
-}
-
-.block {
-    display: block;
 }
 
 .user-profile a {
@@ -795,6 +792,78 @@ footer p {
     bottom: 0;
     left: 0;
 }
+
+.post-options-btn {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.post-options {
+    display: none;
+    width: 105px;
+    position: absolute;
+    top: 90%;
+    right: 1%;
+    border-radius: 4px;
+    background: var(--container-color);
+    box-shadow: 0 0 2px black;
+}
+
+.post-options p {
+    color: var(--text-color);
+    padding: 5px 10px 5px 4px;
+    font-size: 15px;
+}
+
+.post-options p:first-child {
+    border-radius: 4px 4px 0 0;
+}
+
+.post-options p:last-child {
+    border-radius: 0 0 4px 4px;
+}
+
+.post-options-text-fv, .post-options-text-mg, .post-options-text-dl {
+    display: flex;
+    align-items: center;
+}
+
+.post-options-text-fv:hover {
+    background: yellow;
+}
+
+.post-options-text-mg:hover {
+    background: #1876f2;
+}
+
+.post-options-text-dl:hover {
+    background: red;
+}
+
+.post-options-text-fv:hover, .post-options-text-mg:hover, .post-options-text-dl:hover {
+    /* transform: scale(1.02); */
+    font-size: 15.5px;
+    cursor: pointer;
+}
+
+.post-options-text-fv:hover .post-options-img, .post-options-text-mg:hover .post-options-img, .post-options-text-dl:hover .post-options-img {
+    transform: scale(1.2);
+}
+
+.post-options-img {
+    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.block {
+    display: block;
+}
+
 
 /* ---------- media query for home page -------- */
 
