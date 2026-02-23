@@ -692,11 +692,11 @@ footer p {
 }
 
 .info-col {
-    flex-basis: 30%;
+    flex-basis: 33%;
 }
 
 .post-col {
-    flex-basis: 70%;
+    flex-basis: 65%;
 }
 
 .profile-intro {
