@@ -687,18 +687,16 @@ footer p {
 .profile-info {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    justify-content: space-between;
     margin-top: 20px;
 }
 
 .info-col {
     flex-basis: 30%;
-    min-width: 0;
 }
 
 .post-col {
     flex-basis: 70%;
-    min-width: 0;
 }
 
 .profile-intro {
@@ -873,5 +871,17 @@ footer p {
     }
     .info-col, .post-col {
         flex-basis: 100%;
+    }
+    .friends-box div, .photo-box div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 440px) {
+    .friends-box, .photo-box {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .friends-box div img, .photo-box div img {
+        width: 100%;
     }
 }
